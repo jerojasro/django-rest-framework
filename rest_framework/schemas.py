@@ -99,7 +99,7 @@ class SchemaGenerator(object):
             links.append((category, action, link))
 
         if not links:
-            return None
+            return coreapi.Document(title=self.title, content={}, url=self.url)
 
         # Generate the schema content structure, eg:
         # {'users': {'list': Link()}}
